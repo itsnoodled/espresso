@@ -1,0 +1,6 @@
+#!/bin/zsh
+nasm -fbin -f elf64 stage0.asm &&
+ld -m elf_x86_64 -n -o espresso.elf -T .linker.ld stage0.o mb2.o &&
+rm -rf *.o &&
+cd ../../build &&
+mv ../kernel/stage0/espresso.elf ./isodir/boot/grub

@@ -1,0 +1,4 @@
+stage0: pure assembly should really only be used for basics to get C++ running
+stage1: basics such as getting multi core running and parallelizing loading also load the initrd
+stage2: getting early userspace running (fs server, app ipc, Mandatory permissions & calling init)
+stage3: write vfs' to /
